@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/starter.css" />
+    <title>IEQROO | PREP</title>
+  </head> 
+  <body>
+    <header>
+      <div class="nav-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <a href="#"
+                ><svg class="bi" width="20" height="20">
+                  <use
+                    xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#question-circle-fill"
+                  />
+                </svg>
+                Preguntas frecuentes</a
+              >|<a href="#">
+                <svg class="bi" width="20" height="20">
+                  <use
+                    xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#info-circle-fill"
+                  />
+                </svg>
+                Centro de Ayuda</a
+              >|
+            </div>
+            <div class="col-xs-12 text-size-slider">
+              <span class="small-letter">A</span>
+              <input type="range" min="12" max="24" class="slider" value="18" />
+              <span class="big-letter">A</span>
+            </div>
+            |
+            <div class="col-xs-12">
+              <label class="header__selection toggle">
+                <input
+                  js-toggle
+                  class="toggle__input"
+                  aria-label="toggle dark mode"
+                  type="checkbox"
+                />
+                <span class="toggle__fake"></span>
+                <span class="toggle__text">Modo obscuro</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-top">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col">
+              <img
+                src="assets/img/logo_ieqroo.svg"
+                width="152"
+                height="54"
+                class="align-self-center"
+                alt="..."
+              />
+            </div>
+            <div class="col-8">
+              <h5 class="mt-0 text-center">
+                Programa de Resultados <span class="pink">E</span>lectorales
+                Preliminares 2021
+              </h5>
+              <p class="mb-0 text-center">
+                Elecciones Estatales de <span class="pink">Quintana Roo</span>
+              </p>
+            </div>
+            <div class="col">
+              <img
+                src="assets/img/logo_prep.svg"
+                width="152"
+                height="54"
+                class="align-self-center"
+                alt="..."
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="breadcrumb-top">
+        <div class="container-fluid p-0">
+          <div class="d-flex bd-highlight bg-white align-middle">
+            <div class="p-2 bd-highlight">
+              <div class="ml-3 p-0" style="width: 48px;">
+                <svg class="bi" width="32" height="32">
+                  <use
+                    xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#house-fill"
+                  />
+                </svg>
+                <span class="text-center" style="font-size: 0.7em">Inicio</span>
+              </div>
+            </div>
+            <div class="p-2 bd-highlight pink-bg">Ayuntamientos</div>
+            <div class="ml-auto p-2 bd-highlight">
+              <a href="#" class="text-dark">
+                <svg class="bi" width="32" height="32">
+                  <use
+                    xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#server"
+                  /></svg>
+                  <span class="text-center" style="font-size: 0.7em">Base de Datos</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main role="main" class="row">
+      <!-- Navigation -->
+      <nav id="slide-menu">
+        <ul>
+          <li><h4>Consulta de votación</h4></li>
+          <li>Selecciona el reporte que deseas consultar:</li>
+          <li><button class="btn-mun">Votos por Municipios</button></li>
+          <li>
+            <button class="btn-ppp">
+              Votos por Partido Político y Candidatura Independiente
+            </button>
+          </li>
+          <li>Detalle por:</li>
+          <li>
+            Municipio<br /><select>
+              <option>Todos</option>
+            </select>
+          </li>
+          <li>Sección<br /><select></select></li>
+        </ul>
+      </nav>
+      <!-- Content panel -->
+      <div id="content">
+        <div class="menu-trigger rounded-circle"></div>
+        <div class="menu-trigger2">Consulta</div>
+        <h1>Prototipo Menu PREP</h1>
+        <p>Considerando la funcionalidad.</p>
+      </div>
+    </main>
+    <!-- <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>
+          Album example is © Bootstrap, but please download and customize it for
+          yourself!
+        </p>
+        <p>
+          New to Bootstrap?
+          <a href="https://getbootstrap.com/">Visit the homepage</a> or read our
+          <a href="/docs/4.5/getting-started/introduction/"
+            >getting started guide</a
+          >.
+        </p>
+      </div>
+    </footer> -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script type="module" src="assets/js/starter.js"></script>
+  </body>
+</html>
