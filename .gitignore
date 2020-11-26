@@ -4,4 +4,3 @@
 # Ignore dynamically built and collected files that are only
 # used during development
 plantilla/node_modules
-plantilla/assets/.DS_Store
