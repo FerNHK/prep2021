@@ -13,14 +13,14 @@
           <div class="row offset-md-4 justify-content-end">
             <div class="col">
               <a href="#"
-                ><svg class="bi" width="20" height="20">
+                ><svg class="bi" width="18" height="18">
                   <use
                     xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#question-circle-fill"
                   />
                 </svg>
                 Preguntas frecuentes</a
               >|<a href="#">
-                <svg class="bi" width="20" height="20">
+                <svg class="bi" width="18" height="18">
                   <use
                     xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#info-circle-fill"
                   />
@@ -76,7 +76,7 @@
                 width="152"
                 height="54"
                 class="align-self-center"
-                alt="..."
+                alt="PREP 2021"
               />
             </div>
           </div>
@@ -95,15 +95,13 @@
                 
               </div>
             </div>
-            <div class="p-3 pink-bg">Ayuntamientos</div>
-            <div class="ml-auto p-2">
-              <a href="#" class="text-dark">
+            <div class="p-3 bg-pink">Ayuntamientos</div>
+            <div class="ml-auto pr-2">
+              <button type="button" class="btn-light">
                 <svg class="bi" width="32" height="32">
-                  <use
-                    xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#server"
-                  /></svg>
-                  <span class="text-center" style="font-size: 0.7em">Base de Datos</span>
-              </a>
+                <use
+                  xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#server"
+                /></svg>Base de Datos</button>
             </div>
           </div>
         </div>
@@ -112,7 +110,7 @@
     <main role="main" class="row align-items-center">
        <div class="container-fluid">
       <!-- Navigation -->
-      <nav id="slide-menu">
+      <nav id="slide-menu" class="dark-purple">
         <ul>
           <li><h4>Consulta de votación</h4></li>
           <li>Selecciona el reporte que deseas consultar:</li>
@@ -135,8 +133,51 @@
       <div id="content">
         <div class="menu-trigger rounded-circle"></div>
         <div class="menu-trigger2">Consulta</div>
-        <h1>Prototipo Menu PREP</h1>
-        <p>Considerando la funcionalidad.</p>
+        <div class="container-fluid ml-0">
+          <div class="row">
+            <div id="avance-entidad" class="col-8 p-3 bg-white mr-2 rounded">
+              <div class="d-flex">
+                <div class="pink"><h6>Avance Entidad</h6></div>
+                <div class="ml-auto"><button class="bg-pink">
+                  <svg class="bi" width="16" height="16">
+                    <use
+                      xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#arrow-repeat"
+                    /></svg>Actualizar
+                </button></div>
+              </div>
+              <div class="row">
+                <div class="col rounded card"><small>Actas capturadas</small></div>
+                <div class="col rounded card"><svg class="bi" width="18" height="18">
+                  <use
+                    xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#question-circle-fill"
+                  />
+                </svg><small>Participación ciudadana</small></div>
+                <div class="col rounded card"><small>Último corte</small></div>
+              </div>
+            </div>
+            <div class="col p-3 dark-purple ml-2 rounded">
+              <h6>Conoce los resultados de tu casilla</h6>
+              <svg class="bi" width="16" height="16">
+                <use
+                  xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#question-circle-fill"
+                /></svg> <small>Para conocer los resultados de tu casilla, ingresa los siguientes datos.</small>
+                <form>
+                  <div class="form-row mt-2">
+                    <div class="form-group col-md-3">
+                      <label for="seccion"><small>Sección</small></label>
+                      <input type="text" class="form-control" id="seccion">
+                    </div>
+                    <div class="form-group col-md-9">
+                      <label for="p_apellido"><small>Primer apellido</small></label>
+                      <input type="text" class="form-control" id="p_apellido">
+                    </div>
+                  </div>
+                  <button type="submit" class="bg-pink">Consulta</button>
+                </form>
+            </div>
+          </div>
+        </div>
+        
       </div>
       </div>
     </main>

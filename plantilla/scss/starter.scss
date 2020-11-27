@@ -48,7 +48,7 @@ $border-radius: .4rem;
 // @import "bootstrap/scss/code";
 @import "bootstrap/scss/grid";
 // @import "bootstrap/scss/tables";
-// @import "bootstrap/scss/forms";
+@import "bootstrap/scss/forms";
 @import "bootstrap/scss/buttons";
 @import "bootstrap/scss/transitions";
 // @import "bootstrap/scss/dropdown";
@@ -84,7 +84,7 @@ $border-radius: .4rem;
 
 body {
   padding: 0;
-  font: normal normal normal 16px/22px Roboto;
+  font: normal normal normal 16px/18px Roboto;
   letter-spacing: 0px;
   background: #F4F4F4 0% 0% no-repeat padding-box;
   color:black;
@@ -93,9 +93,13 @@ body {
 .pink {
   color:#D5137F;
 }
-.pink-bg {
+.bg-pink {
   background-color: #D5137F;
   color:white;
+}
+.dark-purple {
+  background-color: #34344E;
+  color: white;
 }
 
 // Style Bootstrap icons
@@ -295,7 +299,6 @@ input[type="checkbox"] {
   Menu
 */
 nav#slide-menu {
-  background-color: #34344E;
   top: 0;
 	left: -256px;
 	bottom: 0;
@@ -434,10 +437,8 @@ button {
   display: inline-flex;
   align-items: center;
   min-height: 32px;
-  margin: 8px 0 16px;
   padding: 8px;
   color: var(--foreground-color);
-  text-transform: uppercase;
   text-decoration:none;
   letter-spacing: 0.1em;
   background-color: var(--background-color);
@@ -445,13 +446,19 @@ button {
   border-radius: 12px;
   cursor: pointer;
   opacity: 1;
+  font-size: 0.7em;
 }
 
-.btn-mun {background: #E97EBD 0% 0% no-repeat padding-box;
-box-shadow: 0px 3px 6px #00000029;
-
+.btn-mun {background: #E97EBD 0% 0% no-repeat padding-box;box-shadow: 0px 3px 6px #00000029;
 }
-.btn-ppp {background: #D979AF 0% 0% no-repeat padding-box;}
+.btn-ppp {background:#D979AF 0% 0% no-repeat padding-box;opacity: 0.27;color: #FFFFFF;}
 
 select{width:100%;height:37px;background: #F9F9F9 0% 0% no-repeat padding-box;
 border-radius: 4px;}
+
+.card{
+  background: #F9F9F9 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 3px #0000000F;
+border: 1px solid #DADCE0;
+margin: .25rem !important;
+}
