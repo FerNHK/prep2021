@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/starter.css" />
     <title>IEQROO | PREP</title>
-  </head> 
+  </head>
   <body>
     <header>
       <div class="nav-top">
@@ -19,21 +19,24 @@
                   />
                 </svg>
                 Preguntas frecuentes</a
-              >|<a href="#">
+              >
+            </div>
+            <div class="col">
+              <a href="#">
                 <svg class="bi" width="18" height="18">
                   <use
                     xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#info-circle-fill"
                   />
                 </svg>
                 Centro de Ayuda</a
-              >|
+              >
             </div>
             <div class="col text-size-slider">
               <span class="small-letter">A</span>
               <input type="range" min="12" max="24" class="slider" value="18" />
               <span class="big-letter">A</span>
             </div>
-            |
+
             <div class="col">
               <label class="header__selection toggle">
                 <input
@@ -86,119 +89,165 @@
         <div class="container-fluid p-0">
           <div class="d-flex bg-white align-middle align-items-center">
             <div class="p-2">
-              <div class="ml-3 p-0" style="width: 48px;">
+              <div class="ml-3 p-0" style="width: 48px">
                 <svg class="bi" width="32" height="32">
                   <use
                     xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#house-fill"
                   />
                 </svg>
-                
               </div>
             </div>
             <div class="p-3 bg-pink">Ayuntamientos</div>
             <div class="ml-auto pr-2">
               <button type="button" class="btn-light">
                 <svg class="bi" width="32" height="32">
-                <use
-                  xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#server"
-                /></svg>Base de Datos</button>
+                  <use
+                    xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#server"
+                  />
+                </svg>
+                Base de Datos
+              </button>
             </div>
           </div>
         </div>
       </div>
     </header>
     <main role="main" class="row align-items-center">
-       <div class="container-fluid">
-      <!-- Navigation -->
-      <nav id="slide-menu" class="dark-purple">
-        <ul>
-          <li><h4>Consulta de votación</h4></li>
-          <li>Selecciona el reporte que deseas consultar:</li>
-          <li><button class="btn-mun btn-block">Votos por Municipios</button></li>
-          <li>
-            <button class="btn-ppp btn-block">
-              Votos por Partido Político y Candidatura Independiente
-            </button>
-          </li>
-          <li>Detalle por:</li>
-          <li>
-            Municipio<br /><select>
-              <option>Todos</option>
-            </select>
-          </li>
-          <li>Sección<br /><select></select></li>
-        </ul>
-      </nav>
-      <!-- Content panel -->
-      <div id="content">
-        <div class="menu-trigger rounded-circle"></div>
-        <div class="menu-trigger2">Consulta</div>
-        <div class="container-fluid ml-0">
-          <div class="row">
-            <div id="avance-entidad" class="col-8 p-3 bg-white mr-2 rounded">
-              <div class="d-flex">
-                <div class="pink"><h6>Avance Entidad</h6></div>
-                <div class="ml-auto"><button class="bg-pink">
-                  <svg class="bi" width="16" height="16">
-                    <use
-                      xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#arrow-repeat"
-                    /></svg>Actualizar
-                </button></div>
+      <div class="container-fluid">
+        <!-- Navigation -->
+        <nav id="slide-menu" class="dark-purple">
+          <ul>
+            <li><h4>Consulta de votación</h4></li>
+            <li>Selecciona el reporte que deseas consultar:</li>
+            <li>
+              <button class="btn-mun btn-block">Votos por Municipios</button>
+            </li>
+            <li>
+              <button class="btn-ppp btn-block">
+                Votos por Partido Político y Candidatura Independiente
+              </button>
+            </li>
+            <li>Detalle por:</li>
+            <li>
+              Municipio<br /><select>
+                <option>Todos</option>
+              </select>
+            </li>
+            <li>Sección<br /><select></select></li>
+          </ul>
+        </nav>
+        <!-- Content panel -->
+        <div id="content">
+          <div class="menu-trigger rounded-circle"></div>
+          <div class="menu-trigger2">Consulta</div>
+          <div class="container-fluid ml-0">
+            <div class="row">
+              <div id="avance-entidad" class="col-8 p-3 bg-white mr-2 rounded">
+                <div class="d-flex">
+                  <div class="pink"><h6>Avance Entidad</h6></div>
+                  <div class="ml-auto">
+                    <button class="bg-pink">
+                      <svg class="bi" width="16" height="16">
+                        <use
+                          xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#arrow-repeat"
+                        />
+                      </svg>
+                      Actualizar
+                    </button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col rounded card">
+                    <small>Actas capturadas</small>
+                  </div>
+                  <div class="col rounded card">
+                    <svg class="bi" width="18" height="18">
+                      <use
+                        xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#question-circle-fill"
+                      />
+                    </svg>
+                    <small>Participación ciudadana</small>
+                  </div>
+                  <div class="col rounded card">
+                    <small>Último corte</small>
+                  </div>
+                </div>
               </div>
-              <div class="row">
-                <div class="col rounded card"><small>Actas capturadas</small></div>
-                <div class="col rounded card"><svg class="bi" width="18" height="18">
+              <div class="col p-3 dark-purple ml-2 rounded">
+                <h6>Conoce los resultados de tu casilla</h6>
+                <svg class="bi" width="16" height="16">
                   <use
                     xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#question-circle-fill"
                   />
-                </svg><small>Participación ciudadana</small></div>
-                <div class="col rounded card"><small>Último corte</small></div>
-              </div>
-            </div>
-            <div class="col p-3 dark-purple ml-2 rounded">
-              <h6>Conoce los resultados de tu casilla</h6>
-              <svg class="bi" width="16" height="16">
-                <use
-                  xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#question-circle-fill"
-                /></svg> <small>Para conocer los resultados de tu casilla, ingresa los siguientes datos.</small>
+                </svg>
+                <small
+                  >Para conocer los resultados de tu casilla, ingresa los
+                  siguientes datos.</small
+                >
                 <form>
                   <div class="form-row mt-2">
                     <div class="form-group col-md-3">
                       <label for="seccion"><small>Sección</small></label>
-                      <input type="text" class="form-control" id="seccion">
+                      <input type="text" class="form-control" id="seccion" />
                     </div>
                     <div class="form-group col-md-9">
-                      <label for="p_apellido"><small>Primer apellido</small></label>
-                      <input type="text" class="form-control" id="p_apellido">
+                      <label for="p_apellido"
+                        ><small>Primer apellido</small></label
+                      >
+                      <input type="text" class="form-control" id="p_apellido" />
                     </div>
                   </div>
                   <button type="submit" class="bg-pink">Consulta</button>
                 </form>
+              </div>
+            </div>
+            <div class="row pt-2 bg-white mt-3 rounded-top">
+              <div class="col ">
+                <h5 class="font-weight-light">Ayuntamientos <span class="pink">- <strong>Entidad</strong> - Votos por Municipios</span></h5>
+                <h6>Quintana Roo</h6>
+                <p class="text-justify"><small>
+                  El total de votos calculado y porcentaje que se muestran, se refiere a los votos de las Actas PREP hasta el momento. Por presentación, los decimales de los porcentajes muestran sólo cuatro dígitos. No obstante, al considerar todos los decimales, suman 100%.
+                </small></p>
+              </div>
+              <div class="col-3"><small>Visualiza como:</small></div>
+            </div>
+            <div class="row pl-2 bg-white"><span class="title">Votos en Actas Contabilizadas</span></div>
+            <div class="row bg-white">
+              <div class="col">TABLA</div>
+              <div class="col"><img src="https://via.placeholder.com/700x500.png?text=MAPA"></div>
+            </div>
+            <div class="row bg-white rounded-bottom">
+              <div class="col card rounded"><h5>Resumen de la votación</h5></div>
+            </div>
+            <div class="row pt-2 bg-white mt-3 rounded-top">
+              <div class="col ">
+                <h5 class="title">Estadística Entidad</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col"><h6>Actas</h6></div>
+              <div class="col"><h6>Lista Nominal</h6>
+                <p class="text-justify"><small>
+                  El <strong>número de personas</strong> registrado en la Lista Nominal de las Actas Contabilizadas se utiliza para obtener el porcentaje de Participación ciudadana calculando:  
+                </small></p>
+                <p class="text-center"><small>% de Participación Ciudadana = Total de votos de las Actas contabilizadas, por 100, dividido entre la Lista Nominal de Actas contabilizadas.</small></p>
+              </div>
+              <div class="col"><h6>Participación ciudadana con base en la Lista Nominal de las Actas PREP Contabilizadas</h6></div>
             </div>
           </div>
+          <p class="text-center text-muted"><small>Los resultados presentados tienen un carácter informativo y no son definitivos, por tanto, no tienen efectos jurídicos. Con base en la Ley Federal del Derecho de Autor queda prohibida cualquier modificación al diseño de este sitio. La modificación y/o destrucción de la información y/o contenido total o parcial de este sitio, es delito federal de acuerdo al Código Penal Federal.</small></p>
         </div>
-        
-      </div>
       </div>
     </main>
-    <!-- <footer class="text-muted">
+    <footer>
       <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
         <p>
-          Album example is © Bootstrap, but please download and customize it for
-          yourself!
+          Este sitio se visualiza mejor en las versiones más recientes de los navegadores web.
         </p>
-        <p>
-          New to Bootstrap?
-          <a href="https://getbootstrap.com/">Visit the homepage</a> or read our
-          <a href="/docs/4.5/getting-started/introduction/"
-            >getting started guide</a
-          >.
-        </p>
+        <p>| Instituto Electoral de Quintana Roo |</p>
+        <p>Aviso de privacidad</p>
       </div>
-    </footer> -->
+    </footer> 
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script type="module" src="assets/js/starter.js"></script>
   </body>

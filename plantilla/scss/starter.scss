@@ -9,7 +9,6 @@
 // `$body-color` or write more CSS that override's Bootstrap's CSS like so:
 // `body { color: red; }`.
 
-
 //
 // Override Bootstrap here
 //
@@ -21,8 +20,7 @@ $enable-shadows: true;
 // Customize some defaults
 $body-color: purple;
 $body-bg: #f5f5f5;
-$border-radius: .4rem;
-
+$border-radius: 0.4rem;
 
 //
 // Bring in Bootstrap
@@ -76,8 +74,6 @@ $border-radius: .4rem;
 @import "bootstrap/scss/utilities";
 // @import "bootstrap/scss/print";
 
-
-
 //
 // Custom styles
 //
@@ -86,19 +82,19 @@ body {
   padding: 0;
   font: normal normal normal 16px/18px Roboto;
   letter-spacing: 0px;
-  background: #F4F4F4 0% 0% no-repeat padding-box;
-  color:black;
+  background: #f4f4f4 0% 0% no-repeat padding-box;
+  color: black;
 }
 
 .pink {
-  color:#D5137F;
+  color: #d5137f;
 }
 .bg-pink {
-  background-color: #D5137F;
-  color:white;
+  background-color: #d5137f;
+  color: white;
 }
 .dark-purple {
-  background-color: #34344E;
+  background-color: #34344e;
   color: white;
 }
 
@@ -108,7 +104,7 @@ body {
 }
 
 .nav-top {
-  background: #34344E 0% 0% no-repeat padding-box;
+  background: #34344e 0% 0% no-repeat padding-box;
   width: 100%;
   height: 40px;
   color: white;
@@ -116,13 +112,19 @@ body {
   overflow: hidden;
   font-size: 0.8em;
 }
-.nav-top a { color: white; }
-.nav-top a:hover { text-decoration: underline; }
-.nav-top div.row { padding: 10px 0; }
+.nav-top a {
+  color: white;
+}
+.nav-top a:hover {
+  text-decoration: underline;
+}
+.nav-top div.row {
+  padding: 10px 0;
+}
 
 /* SWITCH DARK */
 @mixin includeLight {
-  $base-text-color: 0,0,0;
+  $base-text-color: 0, 0, 0;
 
   --background-color: #eeeeee;
   --background-card-color: #ffffff;
@@ -136,7 +138,7 @@ body {
 }
 
 @mixin includeDark {
-  $base-text-color: 255,255,255;
+  $base-text-color: 255, 255, 255;
 
   --background-color: #212121;
   --background-card-color: #363636;
@@ -156,17 +158,30 @@ body {
   outline-offset: 2px;
 }
 
-html, html.light { @include includeLight }
-html.dark { @include includeDark }
+html,
+html.light {
+  @include includeLight;
+}
+html.dark {
+  @include includeDark;
+}
 
 @media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) {
-  html { @include includeLight }
-  html.dark { @include includeDark }
+  html {
+    @include includeLight;
+  }
+  html.dark {
+    @include includeDark;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-  html { @include includeDark }
-  html.light { @include includeLight }
+  html {
+    @include includeDark;
+  }
+  html.light {
+    @include includeLight;
+  }
 }
 
 * {
@@ -225,10 +240,10 @@ input[type="checkbox"] {
     background-color: var(--background-toggle-inactive-color);
     border: 1px solid var(--foreground-color);
     border-radius: 12px;
-    transition: background-color 100ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: background-color 100ms cubic-bezier(0.4, 0, 0.2, 1);
     &::after {
       will-change: left;
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       left: 4px;
@@ -239,7 +254,7 @@ input[type="checkbox"] {
       border: 1px solid var(--foreground-color);
       border-radius: 8px;
       transform: translateY(-50%);
-      transition: left 100ms cubic-bezier(0.4, 0.0, 0.2, 1);
+      transition: left 100ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
   &__text {
@@ -248,11 +263,10 @@ input[type="checkbox"] {
   }
 }
 
-
 /**
  * Text Slider Directive - CSS  
  **/
- .text-size-slider {
+.text-size-slider {
   line-height: 100%;
   font-size: 14px;
 }
@@ -261,8 +275,7 @@ input[type="checkbox"] {
   font-size: 12px;
 }
 
-.text-size-slider .big-letter
-{
+.text-size-slider .big-letter {
   font-size: 24px;
 }
 
@@ -294,51 +307,54 @@ input[type="checkbox"] {
   border: 0;
 }
 
-
 /*
   Menu
 */
 nav#slide-menu {
   top: 0;
-	left: -256px;
-	bottom: 0;
-	display: block;
-	float: left;
-	width: 100%;
-	max-width: 256px;
-	height: 100vh;
+  left: -256px;
+  bottom: 0;
+  display: block;
+  float: left;
+  width: 100%;
+  max-width: 256px;
+  height: 100vh;
 
-	-moz-transition: all 300ms;
-	-webkit-transition: all 300ms;
-	transition: all 300ms;
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
 
-	> ul {
-		display: block;
-		margin: 10px;
-		padding: 0;
-		list-style: none;
-		opacity: 0;
+  > ul {
+    display: block;
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
 
-		-moz-transition: all 300ms;
-		-webkit-transition: all 300ms;
-		transition: all 300ms;
+    -moz-transition: all 300ms;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
 
-		li {
-			color: #fff;
-			padding: 6px 0;
-      font-size:0.8em;
-      
-      h4{
+    li {
+      color: #fff;
+      padding: 6px 0;
+      font-size: 0.8em;
+
+      h4 {
         font: normal normal bold 1.2em Roboto;
         letter-spacing: 0px;
       }
-		}
-
-	}
+    }
+  }
 }
 
-body.menu-active nav#slide-menu { left: 0px; }
-body.menu-active nav#slide-menu ul { left: 0px; opacity: 1; }
+body.menu-active nav#slide-menu {
+  left: 0px;
+}
+body.menu-active nav#slide-menu ul {
+  left: 0px;
+  opacity: 1;
+}
 
 /*
   Content
@@ -346,90 +362,107 @@ body.menu-active nav#slide-menu ul { left: 0px; opacity: 1; }
 
 div#content {
   position: absolute;
-  left:80px;
-	width: 95%;
-	height: 100%;
-	padding: 20px;
-	overflow: scroll;
-	background: #F4F4F4;
-	
-	-moz-transition: all 300ms;
-	-webkit-transition: all 300ms;
-	transition: all 300ms;
+  left: 80px;
+  width: 95%;
+  height: 100%;
+  padding: 20px;
+  overflow: scroll;
+  background: #f4f4f4;
 
-	div.menu-trigger {
-		position: fixed;
-		top: 170px;
-		left: 60px;
-		width: 36px;
-		height: 36px;
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+
+  div.menu-trigger {
+    position: fixed;
+    top: 170px;
+    left: 60px;
+    width: 36px;
+    height: 36px;
     background: #ffffff 0% 0% no-repeat padding-box;
-		cursor: pointer;
-		
-		-moz-transition: all 300ms;
-		-webkit-transition: all 300ms;
+    cursor: pointer;
+
+    -moz-transition: all 300ms;
+    -webkit-transition: all 300ms;
     transition: all 300ms;
-    
+
     box-shadow: 0px 3px 6px #00000029;
 
-		&:before { 
-			content: '';
-			display: inline-block;
-			width: 36px;
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 36px;
       height: 36px;
       margin-left: 2px;
-			color: white;
-			background-image: url('data:image/svg+xml,<svg class="bi bi-chevron-right" width="64" height="64" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z"/></svg>');
-  background-repeat: no-repeat;
-  background-size: 2rem 2rem;
-		}
+      color: white;
+      background-image: url('data:image/svg+xml,<svg class="bi bi-chevron-right" width="64" height="64" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z"/></svg>');
+      background-repeat: no-repeat;
+      background-size: 2rem 2rem;
+    }
 
-		&:hover { background: #556270; &:before { color: #fcfeff; } }
-	}
-  
-  
+    &:hover {
+      background: #556270;
+      &:before {
+        color: #fcfeff;
+      }
+    }
+  }
+
   div.menu-trigger2 {
-		position: fixed;
-		top: 180px;
-		left: 20px;
-		width: 36px;
-		height: 36px;
-		cursor: pointer;
-		border-radius: 5px;
-    color:white;
-    font-size:0.7em;
+    position: fixed;
+    top: 180px;
+    left: 20px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.7em;
 
-		-moz-transition: all 300ms;
-		-webkit-transition: all 300ms;
-		transition: all 300ms;
+    -moz-transition: all 300ms;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
 
-		&:before { 
-			content: '';
-			display: inline-block;
-			width: 42px;
-			height: 42px;
-			color: white;
-			background-image: url('data:image/svg+xml,<svg width="64" height="64" viewBox="0 0 16 16" class="bi bi-funnel-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"/></svg>');
-  background-repeat: no-repeat;
-  background-size: 2rem 2rem;
-		}
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 42px;
+      height: 42px;
+      color: white;
+      background-image: url('data:image/svg+xml,<svg class="text-success" width="64" height="64" viewBox="0 0 16 16" class="bi bi-funnel-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"/></svg>');
+      background-repeat: no-repeat;
+      background-size: 2rem 2rem;
+    }
 
-		&:hover { background: #556270; &:before { color: #fcfeff; } }
-	}
+    &:hover {
+      background: #556270;
+      &:before {
+        color: #fcfeff;
+      }
+    }
+  }
 }
 
-body.menu-active div#content { left: 260px; border-radius: 7px 0 0 7px; }
-body.menu-active div#content .menu-trigger { left: 236px; &:before { 
-  content: '';
-  display: inline-block;
-  width: 36px;
-  height: 36px;
-  color: white;
-  background-image: url('data:image/svg+xml,<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>');
-background-repeat: no-repeat;
-background-size: 2rem 2rem;
-}}
-body.menu-active div#content .menu-trigger2 { display:none }
+body.menu-active div#content {
+  left: 260px;
+  border-radius: 7px 0 0 7px;
+}
+body.menu-active div#content .menu-trigger {
+  left: 236px;
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    color: white;
+    background-image: url('data:image/svg+xml,<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 2rem 2rem;
+  }
+}
+body.menu-active div#content .menu-trigger2 {
+  display: none;
+}
 
 /*Buttons*/
 button {
@@ -439,7 +472,7 @@ button {
   min-height: 32px;
   padding: 8px;
   color: var(--foreground-color);
-  text-decoration:none;
+  text-decoration: none;
   letter-spacing: 0.1em;
   background-color: var(--background-color);
   border: 1px solid var(--foreground-color);
@@ -449,16 +482,43 @@ button {
   font-size: 0.7em;
 }
 
-.btn-mun {background: #E97EBD 0% 0% no-repeat padding-box;box-shadow: 0px 3px 6px #00000029;
+.btn-mun {
+  background: #e97ebd 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
 }
-.btn-ppp {background:#D979AF 0% 0% no-repeat padding-box;opacity: 0.27;color: #FFFFFF;}
+.btn-ppp {
+  background: #d979af 0% 0% no-repeat padding-box;
+  opacity: 0.27;
+  color: #ffffff;
+}
 
-select{width:100%;height:37px;background: #F9F9F9 0% 0% no-repeat padding-box;
-border-radius: 4px;}
+select {
+  width: 100%;
+  height: 37px;
+  background: #f9f9f9 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+}
 
-.card{
-  background: #F9F9F9 0% 0% no-repeat padding-box;
-box-shadow: 0px 3px 3px #0000000F;
-border: 1px solid #DADCE0;
-margin: .25rem !important;
+.card {
+  background: #f9f9f9 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 3px #0000000f;
+  border: 1px solid #dadce0;
+  margin-left: 0.25rem !important;
+}
+
+.title {
+  border-left: 6px solid #d5137f;
+  padding-left: 7px;
+  color: #333333;
+}
+
+footer{
+  background: #34344e 0% 0% no-repeat padding-box;
+  width: 100%;
+  height: 40px;
+  color: white;
+  p{
+    display: inline-flex;
+    font-size: 0.8rem;
+  }
 }
