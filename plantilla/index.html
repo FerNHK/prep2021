@@ -10,8 +10,8 @@
     <header>
       <div class="nav-top">
         <div class="container">
-          <div class="row">
-            <div class="col-xs-12">
+          <div class="row offset-md-4 justify-content-end">
+            <div class="col">
               <a href="#"
                 ><svg class="bi" width="20" height="20">
                   <use
@@ -28,13 +28,13 @@
                 Centro de Ayuda</a
               >|
             </div>
-            <div class="col-xs-12 text-size-slider">
+            <div class="col text-size-slider">
               <span class="small-letter">A</span>
               <input type="range" min="12" max="24" class="slider" value="18" />
               <span class="big-letter">A</span>
             </div>
             |
-            <div class="col-xs-12">
+            <div class="col">
               <label class="header__selection toggle">
                 <input
                   js-toggle
@@ -84,19 +84,19 @@
       </div>
       <div class="breadcrumb-top">
         <div class="container-fluid p-0">
-          <div class="d-flex bd-highlight bg-white align-middle">
-            <div class="p-2 bd-highlight">
+          <div class="d-flex bg-white align-middle align-items-center">
+            <div class="p-2">
               <div class="ml-3 p-0" style="width: 48px;">
                 <svg class="bi" width="32" height="32">
                   <use
                     xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#house-fill"
                   />
                 </svg>
-                <span class="text-center" style="font-size: 0.7em">Inicio</span>
+                
               </div>
             </div>
-            <div class="p-2 bd-highlight pink-bg">Ayuntamientos</div>
-            <div class="ml-auto p-2 bd-highlight">
+            <div class="p-3 pink-bg">Ayuntamientos</div>
+            <div class="ml-auto p-2">
               <a href="#" class="text-dark">
                 <svg class="bi" width="32" height="32">
                   <use
@@ -109,15 +109,16 @@
         </div>
       </div>
     </header>
-    <main role="main" class="row">
+    <main role="main" class="row align-items-center">
+       <div class="container-fluid">
       <!-- Navigation -->
       <nav id="slide-menu">
         <ul>
           <li><h4>Consulta de votación</h4></li>
           <li>Selecciona el reporte que deseas consultar:</li>
-          <li><button class="btn-mun">Votos por Municipios</button></li>
+          <li><button class="btn-mun btn-block">Votos por Municipios</button></li>
           <li>
-            <button class="btn-ppp">
+            <button class="btn-ppp btn-block">
               Votos por Partido Político y Candidatura Independiente
             </button>
           </li>
@@ -136,6 +137,7 @@
         <div class="menu-trigger2">Consulta</div>
         <h1>Prototipo Menu PREP</h1>
         <p>Considerando la funcionalidad.</p>
+      </div>
       </div>
     </main>
     <!-- <footer class="text-muted">
