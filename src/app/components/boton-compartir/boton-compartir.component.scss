@@ -1,0 +1,83 @@
+.boton-compartir {
+    position: fixed;
+    background: #fff;
+    border-radius: 34px 34px 0px 0px;
+    bottom: 0;
+    right: 1em;
+    z-index: 9;
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 0.75em 0.5em 0.25em;
+    .fondo {
+        background: transpa⁄rent;
+        border-radius: 50px;
+        transition: 0.2s;
+    }
+    p {
+        font-size: 0.8em;
+        z-index: 9;
+        background: #fff;
+    }
+    &:hover .principal {
+        color: #000;
+        background: #fff;
+    }
+    .principal {
+        background: #23233E;
+        color: #fff;
+        border: 3px solid #D5007F;
+        width: 2.25em;
+        height: 2.25em;
+        font-size: 1.25em;
+        border-radius: 100%;
+        z-index: 9;
+    }
+    .redes {
+        transition: 0.2s;
+        height: 0;
+    }
+    .boton {
+        width: 1.75em;
+        height: 1.75em;
+        font-size: 0.9em;
+        border-radius: 100%;
+        margin: 0.25em;
+        cursor: pointer;
+        position: absolute;
+        right: 0.8em;
+        right: 1.4em;
+        bottom: 0;
+        opacity: 0;
+        transition: 0.2s;
+        &.whatsapp {
+            background: #25D366;
+            color: #fff;
+            transition: 0.2s;
+        }
+        &.facebook {
+            background: #3B5998;
+            color: #fff;
+        }
+        &.twitter {
+            background: #00ACEE;
+            color: #fff;
+        }
+    }
+    &:hover .fondo {
+        background: #DDD;
+    }
+    &:hover .boton {
+        opacity: 1;
+        &.whatsapp {
+            bottom: 4.75em;
+        }
+        &.facebook {
+            bottom: 6.75em;
+        }
+        &.twitter {
+            bottom: 8.75em;
+        }
+    }
+    &:hover .redes {
+        height: 5.75em;
+    }
+}

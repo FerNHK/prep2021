@@ -1,0 +1,101 @@
+// Fondos
+.bgRosaIne {
+    background: #D1308A;
+}
+
+.bgMorado {
+    background: #34344E;
+}
+
+.bgGrisTenue {
+    background: #f9f9f9;
+}
+
+.bgGrisTabla {
+    background: #DDDDDD;
+}
+
+.bgGris {
+    background: #f4f4f4;
+}
+
+.bgBlanco {
+    background: #fff;
+}
+
+.bgAzul {
+    background: #48487C;
+}
+
+.bgRosa{
+    background: #962464;
+}
+
+.bgGrafica1 {
+    background: #D2127E;
+}
+
+.bgGrafica2 {
+    background: #79144C;
+}
+
+.bgGrafica3 {
+    background: #EFB5D3;
+}
+
+// Textos
+.txBlanco {
+    color: #fff;
+}
+
+.txRosaIne {
+    color: #D1308A
+}
+
+.txRosa2{
+    color: #D2127E;
+}
+
+.txGris {
+    color: #707070;
+}
+
+.txAqua {
+    color: #4199A0;
+}
+
+.txMorado {
+    color: #7A4493;
+}
+
+.txRosa{
+    color: #962464;
+}
+
+.txGris2{
+    color:#4B3943
+}
+
+
+// Enlaces 
+.linkAzul {
+    color: #5B5BDE;
+    text-decoration: underline;
+    font-family: 'Roboto-Regular', sans-serif;
+}
+
+
+
+
+
+.preguntas-frecuentes {
+    .bgAzul {
+        background: #48487C !important;
+    }
+}
+
+.pie-pagina {
+    &.bgMorado {
+        background: #34344E !important;
+    }
+}
