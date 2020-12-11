@@ -12,4 +12,9 @@ export class EncabezadoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeFontSize(value: number) {
+    document.body.style.fontSize = value + 'px';
+    console.log(value);
+  }
+
 }

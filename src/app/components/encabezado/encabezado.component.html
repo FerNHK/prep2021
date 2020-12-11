@@ -19,7 +19,7 @@
             </li>
             <li class="pl-3 pr-3 tamanio-fuente borde-izq-solido dis-flex">
               <span class="minimo">A</span
-              ><input type="range" id="customRange1" class="input-rango" /><span
+              ><input type="range" id="range" class="input-rango" #rangeFontSize (change)="changeFontSize(rangeFontSize.value)" min="10" max="24" unit="px" value="12" step="0"/><span
                 class="maximo"
                 ><strong>A</strong></span
               >
