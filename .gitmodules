@@ -1,0 +1,3 @@
+[submodule "plantilla-angular/plantilla-angular/ayuntamientos"]
+	path = plantilla-angular/plantilla-angular/ayuntamientos
+	url = https://github.com/isayas/prep2021.git
