@@ -1,0 +1,14 @@
+.cuerpo {
+    padding-top: 174px;
+}
+
+.altoAvance {
+    height: 24vh;
+    min-height: 190px;
+}
+
+@media (min-width: 1900px) {
+    .altoAvance {
+        height: 20vh;
+    }
+}

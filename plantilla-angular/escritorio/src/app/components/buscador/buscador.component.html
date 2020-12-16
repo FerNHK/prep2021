@@ -1,0 +1,232 @@
+<div
+  class="buscador card bgMorado txBlanco dis-flex space-a align-s pl-2 pr-2 h-100"
+>
+  <div class="container-fluid bgPrototipo">
+    <div class="row">
+      <div class="col-12 px-0">
+        <p class="px16">Conoce los resultados de tu casilla</p>
+        <p class="px10 pl-1">
+          <i
+            aria-hidden="true"
+            data-toggle="modal"
+            data-target="#modalCasilla"
+            class="fas fa-question-circle px14 cursor-hand"
+          ></i>
+          Para conocer los resultados de tu casilla, ingresa los siguientes
+          datos.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <form novalidate="" class="ng-untouched ng-pristine ng-invalid">
+      <div class="row px-1">
+        <div class="col-md-7 px-1">
+          <div class="form-group m-0">
+            <label for="entidad" class="m-0 px14">Entidad</label>
+            <div class="input-group df-sw">
+              <div class="dropdown w-100 bgBlanco">
+                <select
+                  id="entidad"
+                  name="entidad"
+                  ngmodel=""
+                  required=""
+                  entidad=""
+                  class="form-control select-entidad no-border ng-untouched ng-pristine ng-invalid"
+                  ng-reflect-name="entidad"
+                  ng-reflect-model=""
+                  ng-reflect-required=""
+                >
+                  <option></option>
+                  <option
+                    value="1: Aguascalientes"
+                    ng-reflect-ng-value="Aguascalientes"
+                  >
+                    Aguascalientes
+                  </option>
+                  <option
+                    value="2: Baja California"
+                    ng-reflect-ng-value="Baja California"
+                  >
+                    Baja California
+                  </option>
+                  <option
+                    value="3: Baja California Sur"
+                    ng-reflect-ng-value="Baja California Sur"
+                  >
+                    Baja California Sur
+                  </option>
+                  <option value="4: Campeche" ng-reflect-ng-value="Campeche">
+                    Campeche
+                  </option>
+                  <option value="5: Chiapas" ng-reflect-ng-value="Chiapas">
+                    Chiapas
+                  </option>
+                  <option value="6: Chihuahua" ng-reflect-ng-value="Chihuahua">
+                    Chihuahua
+                  </option>
+                  <option value="7: CDMX" ng-reflect-ng-value="CDMX">
+                    CDMX
+                  </option>
+                  <option value="8: Coahuila" ng-reflect-ng-value="Coahuila">
+                    Coahuila
+                  </option>
+                  <option value="9: Colima" ng-reflect-ng-value="Colima">
+                    Colima
+                  </option>
+                  <option value="10: Durango" ng-reflect-ng-value="Durango">
+                    Durango
+                  </option>
+                  <option
+                    value="11: Estado de México"
+                    ng-reflect-ng-value="Estado de México"
+                  >
+                    Estado de México
+                  </option>
+                  <option
+                    value="12: Guanajuato"
+                    ng-reflect-ng-value="Guanajuato"
+                  >
+                    Guanajuato
+                  </option>
+                  <option value="13: Guerrero" ng-reflect-ng-value="Guerrero">
+                    Guerrero
+                  </option>
+                  <option value="14: Hidalgo" ng-reflect-ng-value="Hidalgo">
+                    Hidalgo
+                  </option>
+                  <option value="15: Jalisco" ng-reflect-ng-value="Jalisco">
+                    Jalisco
+                  </option>
+                  <option value="16: Michoacán" ng-reflect-ng-value="Michoacán">
+                    Michoacán
+                  </option>
+                  <option value="17: Morelos" ng-reflect-ng-value="Morelos">
+                    Morelos
+                  </option>
+                  <option value="18: Nayarit" ng-reflect-ng-value="Nayarit">
+                    Nayarit
+                  </option>
+                  <option
+                    value="19: Nuevo León"
+                    ng-reflect-ng-value="Nuevo León"
+                  >
+                    Nuevo León
+                  </option>
+                  <option value="20: Oaxaca" ng-reflect-ng-value="Oaxaca">
+                    Oaxaca
+                  </option>
+                  <option value="21: Puebla" ng-reflect-ng-value="Puebla">
+                    Puebla
+                  </option>
+                  <option value="22: Queretaro" ng-reflect-ng-value="Queretaro">
+                    Queretaro
+                  </option>
+                  <option
+                    value="23: Quintana Roo"
+                    ng-reflect-ng-value="Quintana Roo"
+                  >
+                    Quintana Roo
+                  </option>
+                  <option
+                    value="24: San Luis Potosí"
+                    ng-reflect-ng-value="San Luis Potosí"
+                  >
+                    San Luis Potosí
+                  </option>
+                  <option value="25: Sinaloa" ng-reflect-ng-value="Sinaloa">
+                    Sinaloa
+                  </option>
+                  <option value="26: Sonora" ng-reflect-ng-value="Sonora">
+                    Sonora
+                  </option>
+                  <option value="27: Tabasco" ng-reflect-ng-value="Tabasco">
+                    Tabasco
+                  </option>
+                  <option
+                    value="28: Tamaulipas"
+                    ng-reflect-ng-value="Tamaulipas"
+                  >
+                    Tamaulipas
+                  </option>
+                  <option value="29: Tlaxcala" ng-reflect-ng-value="Tlaxcala">
+                    Tlaxcala
+                  </option>
+                  <option value="30: Veracruz" ng-reflect-ng-value="Veracruz">
+                    Veracruz
+                  </option>
+                  <option value="31: Yucatán" ng-reflect-ng-value="Yucatán">
+                    Yucatán
+                  </option>
+                  <option value="32: Zacatecas" ng-reflect-ng-value="Zacatecas">
+                    Zacatecas
+                  </option>
+                  <!--bindings={
+  "ng-reflect-ng-for-of": "Aguascalientes,Baja California"
+}-->
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 px-1">
+          <div class="form-group m-0">
+            <label for="seccion" class="m-0 px14">Sección</label>
+            <div class="input-group df-sw">
+              <div class="dropdown w-100 bgBlanco">
+                <input
+                  type="text"
+                  id="valueSeccion"
+                  name="valueSeccion"
+                  ngmodel=""
+                  required=""
+                  valueseccion=""
+                  class="form-control ng-untouched ng-pristine ng-invalid"
+                  ng-reflect-name="valueSeccion"
+                  ng-reflect-model=""
+                  ng-reflect-required=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row px-1">
+        <div class="col-md-7 px-1">
+          <div class="form-group">
+            <label for="primerApellido" class="m-0 px14">Primer apellido</label>
+            <div class="input-group df-sw">
+              <div class="dropdown w-100 bgBlanco">
+                <input
+                  type="text"
+                  id="apellido"
+                  name="apellido"
+                  ngmodel=""
+                  required=""
+                  apellido=""
+                  class="form-control ng-untouched ng-pristine ng-invalid"
+                  ng-reflect-name="apellido"
+                  ng-reflect-model=""
+                  ng-reflect-required=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 px-1">
+          <div class="form-group">
+            <label for="submit" class="m-0 px14">&nbsp;</label>
+            <div class="input-group df-sw">
+              <button
+                type="submit"
+                class="btn btn-block px14 px-1 btn-rosa-buscador"
+              >
+                Consulta
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

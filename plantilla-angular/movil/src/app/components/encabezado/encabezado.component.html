@@ -1,0 +1,242 @@
+<header class="total-encabezado sombra w-100">
+  <div>
+    <!-- escritorio -->
+    <div class="container-fluid bgMorado txBlanco d-none d-xl-block d-lg-block d-xs-none d-sm-none d-md-none">
+      <div class="row">
+        <div class="col-md-9 offset-md-3">
+          <ul class="dis-flex justify-e m-0 p-1">
+            <li
+              routerlink="/preguntas-frecuentes"
+              class="pl-3 pr-3 cursorPointer"
+              tabindex="0"
+              ng-reflect-router-link="/preguntas-frecuentes"
+            >
+              <i aria-hidden="true" class="fas fa-question-circle"></i>
+              Preguntas frecuentes
+            </li>
+            <li class="pl-3 pr-3 borde-izq-solido">
+              <i aria-hidden="true" class="fas fa-info-circle"></i>
+              Centro de Ayuda
+            </li>
+            <li class="pl-3 pr-3 tamanio-fuente borde-izq-solido dis-flex">
+              <span class="minimo">A</span
+              ><input type="range" id="customRange1" class="input-rango" /><span
+                class="maximo"
+                ><strong>A</strong></span
+              >
+            </li>
+            <li class="pl-3 pr-3 modo-dark borde-izq-solido dis-flex">
+              <span class="claro">Claro</span
+              ><label
+                for="modo_dia_y_noche"
+                class="switch margin-r-40 margin-b-0"
+                ><input
+                  type="checkbox"
+                  id="modo_dia_y_noche"
+                  value="Modo día o noche"
+                  aria-label="Modo día o noche" /><span
+                  class="slider round"
+                ></span></label
+              ><span class="obscuro">Oscuro</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bgGrisTenue encabezado py-2 d-none d-xl-block d-lg-block d-xs-none d-sm-none d-md-none">
+      <div class="row">
+        <div class="col-3 col-md-2 dis-flex d-none d-md-flex">
+          <img
+            src="assets/img/generales/logo_ieqroo.svg"
+            alt="Logo IEQROO"
+            class="max-logo img-fluid"
+          />
+        </div>
+        <div class="col-3 col-md-2 pl-2 pr-0 d-block d-md-none">
+          <div class="dis-flex w-100 h-100">
+            <img
+              src="assets/img/generales/logo_prep.svg"
+              alt="Logo PREP"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+        <div class="col-7 col-md-8 dis-flex flex-col">
+          <h1>
+            Programa de Resultados
+            <span class="txRosaIne">E</span>lectorales Preliminares 2021
+          </h1>
+          <p class="subtitulo d-none d-md-block">
+            Elección de Ayuntamientos
+          </p>
+        </div>
+        <div class="col-2 col-md-2 dis-flex d-none d-md-flex">
+          <img
+            src="assets/img/generales/logo_prep.svg"
+            alt="Logo PREP"
+            class="max-logo img-fluid"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid menu d-none d-xl-block d-lg-block d-xs-none d-sm-none d-md-none">
+      <div class="row">
+        <div class="w-5 dis-flex flex-col cursorPointer boton-home">
+          <i aria-hidden="true" class="ine ine-home px24"></i>
+          <p class="px14">Inicio</p>
+        </div>
+        <div class="w-95">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-2 dis-flex bgRosaIne txBlanco py-3">
+                <p class="titulo-diputaciones">
+                  <strong>Ayuntamientos</strong>
+                </p>
+              </div>
+              <div class="col-md-10 dis-flex">
+                <ul class="w-100 dis-flex space-b justify-e m-0">
+                  <li
+                    routerlinkactive="router-link-active"
+                    class="pr-4 base-datos cursorPointer font-medium dis-flex"
+                    tabindex="0"
+                    ng-reflect-router-link-active="router-link-active"
+                    ng-reflect-router-link="/base-de-datos"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="ine ine-base-datos mr-2 px24"
+                    ></i>
+                    <p>Base de Datos</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- movil -->
+    <div class="container-fluid py-2 d-block d-sm-block d-md-block d-lg-none d-xl-none">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="col-1 m-0 p-0 dis-flex d-block">
+          <!-- alinear logo a la derecha -->
+          <img
+            src="assets/img/generales/logo_prep_movil.svg"
+            alt="Logo PREP"
+            class="max-logo img-fluid"
+          />
+        </div>
+        <div class="borde-tiempo col-8 dis-flex flex-col text-left align-items-start">
+          <h1>
+            Elecciones Estatales de <br>
+            <span class="txRosaIne">Quintana Roo</span> 2021
+          </h1>
+          
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- TODO: mostrar barra de avance estatal solo en escritorio -->
+    <div class="hidebar" ng-reflect-ng-class="[object Object]">
+      <div class="row size-avance padding-t-10 padding-b-10">
+        <div class="col-2">
+          <div class="center-vertical">
+            <span class="align-middle"
+              ><strong class="txRosaIne"> Avance Estatal</strong></span
+            >
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card cards-avance p-1">
+            <div class="titulo">
+              <div class="row">
+                <div class="col-6">
+                  <strong> Actas capturadas </strong>
+                </div>
+                <div class="col-6 text-right">(0.0000%)</div>
+              </div>
+              <div class="row">
+                <div class="col-6"><strong> 0 </strong> de 157,859</div>
+                <div class="col-6">
+                  <div class="center-vertical">
+                    <div class="borde-barra w-100">
+                      <div class="barra-avance" style="width: 0%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card cards-avance p-1">
+            <div class="titulo">
+              <p class="prueba text-center">
+                <strong
+                  ><i
+                    data-toggle="modal"
+                    data-target="#modalParticipacion"
+                    class="fas fa-question-circle cursor-hand"
+                  ></i>
+                  Participación ciudadana
+                </strong>
+              </p>
+            </div>
+            <div class="contenido dis-flex flex-col">
+              <p class="participacion">
+                <strong> 0.0000% </strong>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card cards-avance p-1">
+            <div class="titulo">
+              <p class="prueba">
+                <strong> Último corte </strong>
+              </p>
+            </div>
+            <div class="contenido dis-flex flex-col">
+              <div class="dis-flex w-100">
+                <p class="fecha mr-1">18 diciembre 2020</p>
+                <div class="dis-flex flex-col borde-tiempo">
+                  <p class="tiempo-centro">Tiempo del Centro</p>
+                  <p class="utc">21:30 h UTC-5</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1">
+          <div class="center-vertical">
+            <div
+              class="actualizar dis-flex flex-col bgRosaIne txBlanco px-4 py-1 px14 cursorPointer"
+            >
+              <i aria-hidden="true" class="fas fa-redo"></i>
+              Actualizar
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

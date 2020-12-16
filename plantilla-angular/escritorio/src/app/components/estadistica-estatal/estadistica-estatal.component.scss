@@ -1,0 +1,119 @@
+.barra {
+    width: 60px;
+    height: 120px;
+}
+
+.progress{
+    position: relative;
+    margin: 4px;
+    float:left;
+    text-align: center;
+  }
+
+  .barOverflow{ /* Wraps the rotating .bar */
+    position: relative;
+    width: 180px; height: 90px; /* Half circle (overflow) */
+    margin-bottom: -14px; /* bring the numbers up */
+    overflow: hidden;
+  }
+
+  .bar{
+    position: absolute;
+    top: 0; left: 0;
+    width: 180px; height: 180px; /* full circle! */
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 10px solid #ccc;     /* half gray, */
+    border-bottom-color: #0bf;  /* half azure */
+    border-right-color: #0bf;
+  }
+
+.grafica {
+  width: 80%;
+  height: 120px;
+  background: #E6E6E6;
+  position: relative;
+}
+
+.progreso {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.graficaHorizontal {
+  width: 100%;
+  height: 20px;
+  background: #E6E6E6;
+  position: relative;
+}
+
+.progresoHorizontal {
+  height: 100%;
+  position: absolute;
+  background: #2E2E2E;
+  left: 0;
+}
+
+.titulo-actas i {
+  font-size: 0.7em;
+  align-self: start;
+}
+
+.total-texto {
+  font-size: 1.2em;
+}
+
+.total-numero {
+  font-size: 2.5em;
+}
+
+@media (max-width: 576px) { 
+  .total-texto {
+      font-size: 1.2em !important;
+  }
+  .total-numero {
+      font-size: 2em !important;
+  }
+}
+
+
+.grafico {
+  top: 8px;
+  position: relative;
+  z-index: 9;
+  &.derecho {
+    top: 12px;
+  }
+}
+.rectangulo {
+  line-height: 1.2;
+  &.izquierdo {
+    background: #D2127E;
+    border-radius: 8px 0 0 8px;
+    border-right: 1px solid #fff;
+  }
+  &.derecho {
+    background: #83044C;
+    border-radius: 0 8px 8px 0;
+    border-left: 1px solid #fff;
+  }
+  .numero {
+    font-size: 1.25em;
+  }
+  .titulo {
+    font-size: 12px;
+  }
+}
+
+.separador:before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  z-index: 9;
+  top: calc(50% - 7.5px);
+  left: calc(100% - 7.5px);
+  border-radius: 100%;
+  position: absolute;
+}

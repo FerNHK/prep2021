@@ -1,0 +1,61 @@
+
+//                                      Display Flex
+.dis-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//                                      Direccion del eje principal
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-colr {
+    flex-direction: column-reverse;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-rowr {
+    flex-direction: row-reverse;
+}
+
+//                                      Distribución de espacios en eje principal
+.space-a {
+    justify-content: space-around;
+}
+
+.space-b {
+    justify-content: space-between;
+}
+
+.space-e {
+    justify-content: space-evenly;
+}
+
+//                                      Justificación en eje principal
+.justify-s {
+    justify-content: flex-start;
+}
+
+.justify-e {
+    justify-content: flex-end;
+}
+
+
+//                                      Alineacion en eje cruzado
+.align-s {
+    align-items: flex-start;
+}
+
+.align-e {
+    align-items: flex-end;
+}
+
+//                                      Alineacion individual de elementos hijos
+.align-ss {
+    align-self: flex-start;
+}

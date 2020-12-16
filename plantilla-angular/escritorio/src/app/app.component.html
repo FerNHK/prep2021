@@ -1,0 +1,39 @@
+<app-boton-compartir></app-boton-compartir>
+<app-encabezado></app-encabezado>
+<div class="cuerpo container-fluid">
+  <div class="row">
+    <div class="col-12 my-3 d-xl-none">
+      <app-avance-estatal></app-avance-estatal>
+    </div>
+    <div
+      class="px-0 bgMorado col-md-12 col-xl-2"
+      ng-reflect-ng-class="col-md-12 col-xl-2"
+    >
+      <app-menu-lateral></app-menu-lateral>
+    </div>
+    <div
+      class="bgGrisTenue px-0 my-3 my-xl-0 col-md-12 col-xl-10"
+      ng-reflect-ng-class="col-md-12 col-xl-10"
+    >
+      <div class="container-fluid py-xl-3">
+        <div class="row">
+          <div class="col-xl-8 d-none d-xl-block altoAvance">
+            <app-avance-estatal></app-avance-estatal>
+          </div>
+          <div class="col-xl-4 d-none d-xl-block altoAvance pl-0">
+            <app-buscador></app-buscador>
+          </div>
+        </div>
+      </div>
+      
+      <router-outlet></router-outlet>
+      <app-votos-distrito></app-votos-distrito>
+      <app-pre-pie-pagina></app-pre-pie-pagina>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 px-0">
+      <app-pie-pagina></app-pie-pagina>
+    </div>
+  </div>
+</div>
