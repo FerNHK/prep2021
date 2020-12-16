@@ -1,5 +1,5 @@
 # PREP
-<img align="right" src="plantilla-angular/escritorio/assets/img/logo_prep.svg" width="250" alt="PREP 2021">
+<img align="right" src="plantilla-angular/escritorio/src/assets/img/logo_prep.svg" width="250" alt="PREP 2021">
 
 Repositorio de elementos del Programa de Resultados Electorales Preliminares 2021
 
