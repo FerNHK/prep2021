@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>MovilVersion</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.css">
+ 
+    <link rel="stylesheet" href="../assets/libs/fontello/css/animation.css">
+    <style>
+        .borde{
+            border-left: 2px solid #34344E;
+            padding-left: 5px;
+        }
+        .borde-2{
+            border-right: 3px solid  #c6c6c6;
+          
+        }
+        .htt{
+            
+            color: #34344E;
+        }
+
+        @font-face {
+      font-family: 'fontello';
+      src: url('../assets/libs/fontello/font/fontello.eot?56786644');
+      src: url('../assets/libs/fontello/font/fontello.eot?56786644#iefix') format('embedded-opentype'),
+           url('../assets/libs/fontello/font/fontello.woff?56786644') format('woff'),
+           url('../assets/libs/fontello/font/fontello.ttf?56786644') format('truetype'),
+           url('../assets/libs/fontello/font/fontello.svg?56786644#fontello') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+     
+     
+    .demo-icon
+    {
+      font-family: "fontello";
+      font-style: normal;
+      font-weight: normal;
+      speak: never;
+     
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* opacity: .8; */
+     
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+     
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+     
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-left: .2em;
+     
+      /* You can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+     
+      /* Font smoothing. That was taken from TWBS */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+     
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    }
+
+
+    /**Circle button**/
+    .colapsador{
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        cursor: pointer;
+        transition: 0.2s;
+        background:  #FC4CAF;
+        color: #fff;
+        box-shadow: 0px 3px 6px #000029;
+    }
+    .center-vertical{
+        height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .barra-avance{
+    background-color: #34344E;
+    height: 100%;
+    }
+
+    
+    
+    .borde-barra {
+        border: 1px solid #ccc;
+        height: 70%;
+    }
+
+    .px13{
+        font-size: 13px!important;
+    }
+    .footerLog {
+        background: #D1308A;
+    }
+    .total{
+        font-size: 3em;
+    }
+    .container-movil {
+        margin: 0;
+        padding: 0 15px;
+        width: 100%;
+    }
+    @media only screen and (max-width: 992px) {
+        .container-movil{
+            margin: 0;
+            padding: 0 15px;
+            width: 100%;
+        }
+        
+    }
+
+
+
+   
+   
+        #mapa{
+            min-width: 300px;
+            max-width: 450px;
+        }
+        .arco{
+            min-width: 300px;
+            max-width: 450px;
+        }
+    
+
+        .contenedorMaestro {
+            margin: 0 auto;
+            max-width: 1920px;
+        }
+    
+        .bgMorado {
+            background: #34344e!important;
+        }
+
+        .phr{
+            text-decoration: underline!important;
+            color:  #34344e!important;
+        }
+
+
+        @media only screen and (max-width: 992px){
+            .tamanioBotonesFiltros {
+                width: 50%;
+                height: inherit;
+            }
+        }
+
+        .progreso {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+        .grafica {
+            width: 80%;
+            height: 120px;
+            background: #E6E6E6;
+            position: relative;
+        }
+        .rectangulo.izquierdo{
+            background: #D2127E;
+            border-radius: 8px 0 0 8px;
+            border-right: 1px solid #fff;
+        }
+        
+
+        .rectangulo.derecho{
+            background: #83044C;
+            border-radius: 0 8px 8px 0;
+            border-left: 1px solid #fff;
+        }
+
+        .rectangulo{
+            line-height: 1.2;
+        }
+        .separador:before {
+            content: "";
+            width: 15px;
+            height: 15px;
+            background: #fff;
+            z-index: 9;
+            top: calc(50% - 7.5px);
+            left: calc(100% - 7.5px);
+            border-radius: 100%;
+            position: absolute;
+        }
+        .graficaHorizontal{
+            width: 100%;
+            height: 20px;
+            background: #E6E6E6;
+            position: relative;
+        }
+        .progresoHorizontal{
+            height: 100%;
+            position: absolute;
+            background: #2E2E2E;
+            left: 0;
+        }
+        @media (max-width: 576px){
+            .total-numero{
+                font-size: 2em !important;
+            }
+            .total-texto{
+                font-size: 1.2em !important;
+            }
+        }
+
+        .total-texto{
+            font-size: 1.2em;
+        }
+        .total-numero {
+            font-size: 2.5em;
+        }
+
+        .solidRobot{
+            font-family: Roboto-Regular,sans-serif!important;
+            margin: 0;
+            padding: 0;
+            
+        }
+        body .contenedorMaestro{
+            background:url(../assets/img/MarcaDeAgua.png);
+            background-repeat:repeat
+        }
+        .boton-compartir {
+            position: fixed;
+            background: #fff;
+            border-radius: 34px 34px 0px 0px;
+            bottom: 0;
+            right: .5em;
+            z-index: 9;
+            box-shadow: 0px 3px 6px #00000029;
+            padding: 0.4em 0.1em 0.1em;
+        }
+        
+        .boton-compartir .fondo{
+            background: transpa⁄rent;
+            border-radius: 50px;
+            transition: 0.2s;
+        }
+        .boton-compartir .redes {
+            transition: 0.2s;
+            height: 0;
+        }
+        .boton-compartir.principal{
+                background: #23233E;
+                color: #fff;
+                border: 3px solid #D5007F;
+                width: 2.25em;
+                height: 2.25em;
+                font-size: 1.25em;
+                border-radius: 100%;
+                z-index: 9;
+        }
+    
+        .boton-compartir .boton.whatsapp{
+            background: #25D366;
+            color: #fff;
+            transition: 0.2s;
+        }
+        .boton-compartir .boton{
+            width: 1.75em;
+            height: 1.75em;
+            font-size: 0.9em;
+            border-radius: 100%;
+            margin: 0.25em;
+            cursor: pointer;
+            position: absolute;
+            right: 0.8em;
+            right: 1.4em;
+            bottom: 0;
+            opacity: 0;
+            transition: 0.2s;
+        }
+    
+        .boton-compartir .principal{
+            background: #23233E;
+            color: #fff;
+            border: 3px solid #D5007F;
+            width: 2.25em;
+            height: 2.25em;
+            font-size: 1.25em;
+            border-radius: 100%;
+            z-index: 9;
+        }
+        .fecha {
+            font-size: 10px;
+            font-family: "Roboto-Medium", sans-serif;
+        }
+        .tiempo-centro{
+            font-size: 9px;
+            color: #34344E;
+        }
+        .utc {
+            font-size: 8px;
+            color: #34344E;
+            font-family: "Roboto-Medium", sans-serif;
+        }
+        .topTabla {
+            margin-top: -120px;
+        }
+    </style>
+    
+</head>
+<body class="">
+    <div class="boton-compartir dis-flex flex-col">
+        <div class="fondo dis-flex flex-col pt-1">
+            <div class="redes">
+                <div class="boton whatsapp dis-flex">
+                    <i class="demo-icon icon-whatsapp"></i>
+                </div>
+                <div class="boton facebook dis-flex">
+                    <i aria-hidden="true"  class="demo-icon icon-facebook"></i>
+                    
+                </div>
+                <div class="boton twitter dis-flex">
+                    <i class="demo-icon icon-twitter"></i>
+                </div>
+            </div>
+            <div class="principal dis-flex">
+                <i class="demo-icon icon-share"></i>
+            </div>
+        </div>
+        <p class="text-center"> Compartir </p>
+    </div>
+    
+    
+    <div class="contenedorMaestro">
+        <div class="container-movil" style="padding-top: 4rem; ">
+            <div class="row">
+                <header class="total-encabezado sombra w-100 fixed-top ">
+                    <div class="container-movil bgGrisTenue encabezado py-2 bg-white px16">
+                        <div class="d-flex flex-row">
+                            <img class="max-logo img-fluid" src="../assets/img/icono_prep.png" alt="" width="50"/>
+                            <div class="flex-column flex-fill borde align-self-center" style="line-height:1.2rem">
+                                <p class="htt">Elecciones Estatales de</p>
+                                <p class="txRosaIne px18">
+                                    <strong> Quintana Roo <span class="htt">2021</span></strong></p>
+                            </div>
+                            <div class="align-self-center" style="line-height:0.7rem">
+                                <button class="btn btn-sm ">
+                                    <i class="demo-icon htt icon-menu px30"></i>
+                                </button>             
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                      <ul class="navbar-nav">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+            </div>
+            
+
+
+            <!--Avance-->
+            <div id="avance" class="row pl-1 pr-1 pt-3 mb-2">
+                <div class="card sombra d-flex flex-column w-100">
+                    <div class="container-movil">
+                        <div class="row">
+                            <div class="d-flex p-1 col-9 pl-2 pt-3">
+                                <h3 class="txRosaIne  px18 flex-fill">
+                                    <strong>
+                                        Avance Entidad
+                                    </strong>
+                                </h3>
+                            </div>
+                            <div class="col-3 dis-flex justify-e ">
+                                <div class="colapsador actualizar  dis-flex abierto">
+                                    <i class="demo-icon icon-cw"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="d-flex p-1  col-9 pl-3">
+                                <p class="htt px16 ">
+                                    <strong> Actas capturadas </strong>
+                                </p>
+                            </div>
+                            <div class="col-3 dis-flex justify-e">
+                                <p class="htt px16">
+                                    <strong>(90.0300%)</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="d-flex justify-content-end p-1  col-5 pl-0">
+                                <p class="htt px16">
+                                   <strong> 0 </strong> de 157,859 
+                                </p>
+                            </div>
+                            <div class="col-7">
+                                <div class="center-vertical">
+                                    <div class="borde-barra w-100">
+                                        <div class="barra-avance" style="width: 20%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-2 mt-2 ">
+                            <div class="dis-flex flex-col col-5  borde-2  pl-1 pr-2 pr-0">
+                                <a class="htt phr align-self-end px11" href="#">
+                                    <strong>Participación Ciudadana</strong>
+                                </a>
+                                <p class=" htt px16 p-1 align-self-end">
+                                    <strong>(90.0300%)</strong>
+                                </p>
+                            </div>
+                            <div class="dis-flex flex-col col-7  pl-1  pr-0">
+                                <p class="htt px14 align-self-start">
+                                    <strong>Ultimo Corte</strong>
+                                </p>
+                                
+                                <div class="d-flex flex-row  pt-1 htt px16">
+                                    <p>
+                                      <strong>07 junio 2021</strong>
+                                    </p>
+                                  
+                                  <div class="flex-column px8 borde pl-1">
+                                      <p>
+                                          <strong>Hora Local</strong>
+                                      </p>
+                                      <p>
+                                        <strong>00:16h UTC-5</strong>
+                                      </p>
+                                  </div>
+                                </div>
+                               <!-- <div class="contenido dis-flex flex-col align-e pt-3">
+                                    <div class="dis-flex w-100">
+                                      <p class=" mr-1">24 noviembre 2020</p>
+                                      <div class="dis-flex flex-col borde-tiempo borde">
+                                        <p class="tiempo-centro">Tiempo del Centro</p>
+                                        <p class="utc">21:30 h UTC-5</p>
+                                      </div>
+                                    </div>
+                                  </div>-->
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            
+
+
+            <!--Consulta-->
+            <div class="row bgMorado pt-1 mb-2">
+                <div class="container-lg">
+                        <div class="d-flex flex-column">
+                            <div class="pt-2 p-1">
+                                <h3 class="px16 text-white">
+                                <strong>Consulta de votación</strong>  
+                                </h3>
+                                <p class="px14 text-white">
+                                    Selecciona el reporte que deseas consultar:
+                                </p>
+                            </div>
+
+
+                            <div class="row pt-2 mb-2">
+                                <div class="tamanioBotonesFiltros">
+                                    <div class="btn btn-sm btn-md btn-rosa btn-block px12   btn-rosa-active" tabindex="0"> 
+                                       <strong> Votos por <br> Municipio </strong>
+                                    </div> 
+                                </div>
+                                <div class="tamanioBotonesFiltros">
+                                    <div class="btn btn-sm btn-md  btn-ajuste btn-rosa btn-block px12 " > 
+                                        <strong>Votos por Partido Político y <br> Candidatura Independiente </strong>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        
+                            <div class="d-flex flex-row mb-2" >
+                                <div class="btn-group " style="width: 100%;">
+                                    <button style="border-radius: 5rem;"class="btn btn-light btn-md btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Municipio
+                                    </button>
+                                    <div class="dropdown-menu text-center" style="width: 100%;">
+                                    <a class="dropdown-item" href="#">Othon Pompeyo Blanco</a>
+                                    <a class="dropdown-item" href="#">Bacalar</a>
+                                    <a class="dropdown-item" href="#">Benito Juarez</a>
+                                    <a class="dropdown-item" href="#">Puerto Morelos</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                </div>
+                
+            </div>
+
+
+            <!--Mapa-->
+            <div class="row p-1 pt-2 mb-2">
+                <div class="card sombra d-flex flex-column w-100">
+                    <div class="container-lg">
+                        <div class="row">
+                            <div class="d-flex p-1 col-12 pl-2 pt-3">
+                                <h3  class="px20 flex-fill">
+                                    <strong >
+                                        Ayuntamientos -
+                                        <span class="txRosaIne"> Entidad -</span>
+                                        <span class="txRosaIne">Votos por Municipio</span>
+                                    </strong>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="d-flex p-1 col-12 pl-2 " >
+                                <p class="htt px18" style="font-weight: 500;"><strong>Quintana Roo</strong></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="d-flex flex-column p-1 col-12 pl-2 " >
+                                <p class="htt px16">
+                                    El total de votos calculado y porcentaje que 
+                                    se muestran, se refiere a los votos de las 
+                                    Actas PREP hasta el momento.
+                                </p>
+                                <p class="htt px16">
+                                    <br>
+                                    Por presentación, los decimales de los 
+                                    porcentajes muestran sólo cuatro dígitos. No
+                                    obstante, al considerar todos los decimales, suman 100%.
+                                </p>
+                                <div class="d-flex flex-column" style="line-height: 1.7rem;">
+                                    <p class="px-2 pt-2 px20 text-center htt">
+                                        <strong>Total de Votos</strong> <br>
+                                        
+                                    </p>
+                                    <p class="px-2 p-2 text-center total txRosaIne">
+                                        459,964
+                                        <p class=" p-2 align-self-center txRosaIne px22">100.0000%</p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="row">
+                            <div class="d-flex p-1 col-12 pl-2 " >
+                                <p class="htt px20" style="font-weight: 500;"><strong>Mapa de Municipios</strong></p>
+                            </div>
+                            <div class="d-flex p-1 col-12 pl-2 ">
+                                <p class="htt px16">
+                                    El Mapa resalta en los Municipios Electorales el Partido
+                                    Político, Coalición o Candidatura Independiente que 
+                                    llevan ventaja hasta el momento.
+                                 </p>
+                            </div>
+        
+                            <div class="d-flex col-12 justify-content-center">
+                                <!--Media corregir-->
+                                    <div id="mapa"></div>
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--Estadistica Entidad-->
+            <div id="estadisticaEntidad" class="row pl-1 pr-1 pt-3 mb-2">
+                <div class="card sombra d-flex flex-column w-100">
+                    <div class="container-movil">
+                        <div class="row p-3">
+                            <h4 class="subtitulo-seccion htt pleca-izquierda">
+                                <strong >
+                                    Estadística  Nacional 
+                                </strong>
+                            </h4>
+                        </div>
+                        <div class="row dis-flex space-a align-s">
+                            <div class="col-11 col-sm-6 pb-sm-5">
+                                <div class="titulo-actas dis-flex justify-s">
+                                    <p class="titulo htt pb-3" style="text-decoration: underline;">
+                                        <strong >Actas</strong>
+                                    </p>
+                                </div>
+                                <div  class="row  htt dis-flex space-a">
+                                    <div  class="col-3  dis-flex flex-col">
+                                        <div  class="grafica">
+                                            <div  class="progreso bgGrafica1"  style="height: 100%;"></div>
+                                        </div>
+                                        <p  class="px16 pt-1">
+                                            <strong > 156,808 </strong>
+                                        </p>
+                                        <p class="px14"> 100.0000% </p>
+                                        <p class="px12">Esperadas</p>
+                                    </div>
+                                    <div  class="col-3 col-lg-2 col-xl-4 dis-flex flex-col">
+                                        <div  class="grafica">
+                                            <div  class="progreso bgGrafica2" >
+                                            </div>
+                                        </div>
+                                        <p  class="px16 pt-1">
+                                            <strong > 0 </strong>
+                                        </p>
+                                        <p  class="px14"> 0.0000% </p>
+                                        <p  class="px12">Capturadas</p>
+                                    </div>
+                                    <div  class="col-3 col-lg-2 col-xl-4 dis-flex flex-col">
+                                        <div  class="grafica">
+                                            <div  class="progreso bgGrafica3" ></div>
+                                        </div>
+                                        <p  class="px16 pt-1">
+                                            <strong > 0 </strong>
+                                        </p>
+                                        <p  class="px14"> 0.0000% </p>
+                                        <p  class="px12">Contabilizadas</p>
+                                    </div>
+                                </div>
+                                <div  class="row pt-5">
+                                    <div  class="titulo-actas dis-flex justify-s">
+                                        <p  class="titulo pb-3 htt px20">
+                                            <strong >Actas Contabilizadas por ubicación de casilla:</strong>
+                                        </p>
+                                    </div>
+                                    <div  class="container mb-2">
+                                        <div  class="row">
+                                            <div  class="col-6 dis-flex justify-s">
+                                                <img  src="../assets/img/Ciudad.svg" alt="Urbanas" class="img-fluid w-80 grafico izquierdo">
+                                            </div>
+                                            <div  class="col-6 dis-flex justify-e">
+                                                <img  src="../assets/img/Nourbanos.svg" alt="Urbanas" class="img-fluid w-80 grafico derecho">
+                                            </div>
+                                        </div>
+                                        <div  class="row justify-content-center txBlanco text-center">
+                                            <div  class="col-6 pr-0 separador">
+                                                <div  class="rectangulo izquierdo dis-flex flex-col py-2">
+                                                    <p  class="numero"> 0 </p>
+                                                    <p  class="titulo px12"> Urbanas </p>
+                                                </div>
+                                            </div>
+                                            <div  class="col-6 pl-0">
+                                                <div  class="rectangulo derecho dis-flex flex-col py-2">
+                                                    <p  class="numero"> 0 </p>
+                                                    <p  class="titulo px12"> No Urbanas </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="d-flex flex-column p-3 pt-2">
+                                <p class="titulo pb-3 px18"><strong >Lista Nominal</strong></p>
+                                <p class="px12 mb-3 px16">
+                                     El <strong >número de personas</strong> 
+                                     registrado en la Lista Nominal de las Actas Contabilizadas se 
+                                     utiliza para obtener el porcentaje de Participación ciudadana calculando: 
+                                </p>
+                                <p class="px12 text-center px16"> % de Participación Ciudadana =
+                                     Total de votos de las Actas contabilizadas, por 100, dividido entre la Lista 
+                                     Nominal de Actas contabilizadas. 
+                                </p>
+                            </div>
+
+                        </div>
+                      
+                            <div id="graficaEstadisticaEscritorio" style=""> 
+                            </div>
+                       
+                            <div class=" topTabla">
+                                <div id="padre" class="row ">
+                                    <p class="px16 p-3"> En el gráfico no se considera la cantidad de votos
+                                        asentada en las Actas PREP de Casilla Especial de 
+                                        Representación Proporcional. 
+                                   </p>
+                                </div>
+                               
+                              </div>
+                        
+                        <div class="row pt-2 dis-flex flex-column">
+                            <p class="titulo px20 p-3 htt pb-3">
+                                <strong>Participación ciudadana con base en la Lista Nominal de las 
+                                    Actas PREP Contabilizadas
+                                </strong>
+                            </p>
+                            <p class="px38 font-medium txRosaIne text-center"> 0.0000% </p>
+
+                            <div class="col-12">
+                                <p class="texto text-center htt font-medium"> Porcentaje calculado 
+                                    <strong >considerando</strong> 
+                                    la votación en <strong >Casillas Especiales.</strong>
+                                </p>
+                            </div>
+
+                        </div>
+                       
+                        <div class="row mt-4 px-0 mx-0 bgGris">
+                            <div class="col-md-9">
+                                <strong>
+                                    <p  class="px14 font-medium"> 
+                                    Votos en Casillas Básicas,
+                                    <br>Contiguas y Extraordinarias 
+                                </p></strong>
+                            </div>
+                            <div  class="col-md-3 dis-flex justify-e align-e">
+                                <p class="px18">
+                                    <strong> 0 </strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div  class="row pt-1">
+                            <div  class="col-md-12">
+                                <div  class="graficaHorizontal">
+                                    <div  class="progresoHorizontal" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div  class="row px-0 mx-0 mt-2 bgGris">
+                            <div  class="col-md-9">
+                                <p  class="px14 font-medium"> 
+                                   <strong> Votos en Casillas <br >Especiales </strong>
+                                </p>
+                            </div>
+                            <div  class="col-md-3 dis-flex justify-e align-e">
+                                <p  class="px18"><strong > 0 </strong></p>
+                            </div>
+                        </div>
+
+                        <div  class="row pt-1">
+                            <div  class="col-md-12">
+                                <div  class="graficaHorizontal">
+                                    <div  class="progresoHorizontal" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px13 padding-t-5 txGris2"> En esta tabla se considera la 
+                            cantidad de votos asentada en las Actas PREP de Casilla Especial 
+                            de Representación Proporcional. 
+                        </div>
+
+                        <div  class="dis-flex space-b pt-4">
+                            <p  class="total-texto">
+                                <strong>
+                                    Total de <br >Votos
+                                </strong>
+                            </p>
+                            <p  class="total-numero">
+                                <strong> 460,639 </strong>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+       
+
+
+
+
+
+
+
+
+            
+            <!--Footer-->
+            <div class="row">
+                <footer class=" w-100">
+                    <div  class="container-lg bgMorado">
+                        <button class="btn w-100 bgMorado btn-md text-white" >
+                            Version Escritorio<i class="demo-icon icon-link-ext"></i>
+                        </button>
+                    </div>
+                    <div class="container-lg px-4 p-2 px10 text-center">
+                        <p  class="m-0"> 
+                            Los resultados presentados tienen un carácter informativo y no son definitivos, por tanto, no tienen efectos jurídicos. 
+                        </p>
+                        <p  class="m-0"> 
+                            Con base en la Ley Federal del Derecho de Autor queda prohibida cualquier modificación al diseño de este sitio. 
+                        </p>
+                        <p  class="m-0"> 
+                            La modificación y/o destrucción de la información y/o contenido total o parcial de este sitio, es delito federal de acuerdo al Código Penal Federal. 
+                        </p>
+                    </div>
+
+                    <div class="container-movil px10 text-center footerLog">
+                        <div class="">
+                            <img src="../assets/img/logo_ieqroo.svg" width="80" height="80" alt="">
+                        
+                            <img src="../assets/img/logo_prep.svg" width="80" height="80" alt="">
+                    
+                        </div>
+                    </div>
+
+                    <div class="container-lg bgMorado text-white">
+                        <div class="d-flex flex-column  px14 text-center">
+                            <a href="#" class="p-3">
+                                Aviso de privacidad 
+                            </a>
+                            
+                            <p class="p-2" >
+                                Instituto Electoral de Quintana Roo
+                            </p>
+                        </div>
+                    </div>
+
+                 
+                </footer>
+            </div>
+
+
+        </div>
+    </diV>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="../assets/libs/highchart/highcharts.js"></script>
+    <script src="../assets/libs/highchart/highcharts-more.js"></script>
+    <script src="../assets/libs/highchart/map.js"></script>
+    <script src="../assets/libs/highchart/data.js"></script>
+    <script src="../assets/libs/highchart/exporting.js"></script>
+    <script src="../assets/libs/highchart/export-data.js"></script>
+    <script src="../assets/libs/highchart/accessibility.js"></script>
+
+    <script crossorigin="anonymous" src="../assets/libs/map.js">
+    </script>
+
+    <script crossorigin="anonymous" src="../assets/libs/highchart/solid-gauge.js">
+    </script>
+    
+    <script src="../assets/js/solid-escritorio.js"></script>
+
+
+    
+  
+
+</body>
+</html>
