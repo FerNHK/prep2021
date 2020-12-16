@@ -1,5 +1,5 @@
 # PREP
-<img align="right" src="plantilla/assets/img/logo_prep.svg" width="250" alt="PREP 2021">
+<img align="right" src="plantilla-angular/escritorio/assets/img/logo_prep.svg" width="250" alt="PREP 2021">
 
 Repositorio de elementos del Programa de Resultados Electorales Preliminares 2021
 
@@ -11,13 +11,16 @@ Repositorio de elementos del Programa de Resultados Electorales Preliminares 202
 Todo el código en este repo esta bajo la licencia MIT.
 
 ## Historial
-
+* 0.0.2
+    * Plantilla Angular + Bootstrap inicial
 * 0.0.1
-    * Plantilla inicial
+    * Plantilla Bootstrap inicial
 
 ## Meta
 
 Isaias Contreras – [@isayasmx](https://twitter.com/isayasmx) – isaias.cb@gmail.com
+Gregorio Salazar - [@GregoreoSalazar](https://twitter.com/GregoreoSalazar) - gregorio_sl@hotmail.com 
+Fernando Hernandez - fer_nhk@hotmail.com 
 
 ## Contributing
 
