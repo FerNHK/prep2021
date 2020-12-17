@@ -1,90 +1,59 @@
 <div class="bgPrototipo">
-  <div
-    placement="right"
-    show-delay="200"
-    class="colapsador dis-flex d-none d-xl-block abierto"
-    ng-reflect-placement="right"
-    ng-reflect-show-delay="200"
-    ng-reflect-ng-class="abierto"
-    ng-reflect-tooltip-value="Ocultar Menú"
-  >
-    <i
-      aria-hidden="true"
-      class="fas fa-chevron-left"
-      ng-reflect-ng-class="fa-chevron-left"
-    ></i>
-  </div>
-  <!--bindings={
+    <div placement="right" show-delay="200" class="colapsador dis-flex d-none d-xl-block abierto" ng-reflect-placement="right" ng-reflect-show-delay="200" ng-reflect-ng-class="abierto" ng-reflect-tooltip-value="Ocultar Menú">
+        <i aria-hidden="true" class="fas fa-chevron-left" ng-reflect-ng-class="fa-chevron-left"></i>
+    </div>
+    <!--bindings={
   "ng-reflect-ng-if": "false"
 }-->
-  <div class="container-fluid barra-lateral txBlanco px14">
-    <div class="row pl-2">
-      <div class="col-12">
-        <div class="pt-2">
-          <h3 class="px16">
-            <strong>Consulta de votación</strong>
-          </h3>
+    <div class="container-fluid barra-lateral txBlanco px14">
+        <div class="row pl-2">
+            <div class="col-12">
+                <div class="pt-2">
+                    <h3 class="px16">
+                        <strong>Consulta de votación</strong>
+                    </h3>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <p>Selecciona el reporte que deseas consultar:</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row mb-4">
-          <div class="col">
-            <p>Selecciona el reporte que deseas consultar:</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row" ng-reflect-ng-class="[object Object]">
-      <!--bindings={}-->
-      <div class="col-12 col-xl-14 mb-1 px-1">
-        <div
-          class="btn btn-rosa btn-block px14 px-1 py-3 btn-rosa-active"
-          tabindex="0"
-          ng-reflect-router-link="/votos-distrito"
-          ng-reflect-ng-class="[object Object]"
-        >
-          Votos por Distritos
-        </div>
-      </div>
-      <!--bindings={
-  "ng-reflect-ng-if": "true"
+        <div class="row" ng-reflect-ng-class="[object Object]">
+            <!--bindings={}-->
+            <div class="col-12 col-xl-14 mb-1 px-1">
+                <button class="btn btn-rosa btn-block px14 px-1 py-3 " routerLinkActive="btn-rosa-active" [routerLink]="['evm']" tabindex="0" ng-reflect-ng-class="[object Object]">
+            Votos por Municipios
+        </button>
+            </div>
+            <!--bindings={
+"ng-reflect-ng-if": "true"
 }-->
-      <div class="col-12 col-xl-14 mb-1 px-1">
-        <div
-          class="btn btn-ajuste btn-rosa btn-block px14 px-1"
-          ng-reflect-ng-class="[object Object]"
-        >
-          Votos por Partido Político y Candidatura Independiente
+            <div class="col-12 col-xl-14 mb-1 px-1">
+                <button class="btn btn-ajuste btn-rosa btn-block px14 px-1" routerLinkActive="btn-rosa-active" [routerLink]="['evp']" ng-reflect-ng-class="[object Object]">
+            Votos por Partido Político y Candidatura Independiente
+        </button>
+            </div>
+            <!--bindings={}-->
         </div>
-      </div>
-      <!--bindings={}-->
-    </div>
-    <div class="row my-4">
-      <div class="col">
-        <p class="px16">Detalle por:</p>
-        <div class="row grupo-combos pl-2">
-          <div class="col-4 col-xl-12 combo mb-2">
-            <label for="distrito" class="px14"> Distrito </label>
-            <div class="input-group df-sw">
-              <div class="dropdown w-100 bgBlanco">
-                <button
-                  type="button"
-                  id="dDistrito"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  class="btn dropdown-toggle dis-flex space-b w-100 p-1 px14"
-                  disabled=""
-                >
+        <div class="row my-4">
+            <div class="col">
+                <p class="px16">Detalle por:</p>
+                <div class="row grupo-combos pl-2">
+                    <div class="col-4 col-xl-12 combo mb-2">
+                        <label for="distrito" class="px14"> Distrito </label>
+                        <div class="input-group df-sw">
+                            <div class="dropdown w-100 bgBlanco">
+                                <button type="button" id="dDistrito" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn dropdown-toggle dis-flex space-b w-100 p-1 px14" disabled="">
                   &nbsp; Todas
                   <i
                     aria-hidden="true"
                     class="mcad mcad-drop-down_flecha mr-1"
                   ></i>
                 </button>
-                <div
-                  aria-labelledby="dDistrito"
-                  class="dropdown-menu px14 w-100"
-                >
-                  <a href="" class="dropdown-item">Todas</a
+                                <div aria-labelledby="dDistrito" class="dropdown-menu px14 w-100">
+                                    <a href="" class="dropdown-item">Todas</a
                   ><!--bindings={
   "ng-reflect-ng-for-of": null
 }-->
