@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
-/*Http Client*/ 
+/*Http Client */ 
 import { HttpClientModule  } from "@angular/common/http";
 
 /*Rutas*/
