@@ -1,7 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+
+/*Http Client */ 
+import { HttpClientModule  } from "@angular/common/http";
+
+/*Rutas*/
+import { APP_ROUTING } from './app-routing.module';
+
+/*Servicios */
+import { JsonService } from "./services/json.service";
+
+
 import { AppComponent } from './app.component';
 import { BotonCompartirComponent } from './components/boton-compartir/boton-compartir.component';
 import { EncabezadoComponent } from './components/encabezado/encabezado.component';
@@ -14,6 +24,8 @@ import { ResumenDistritoMapaComponent } from './components/resumen-distrito-mapa
 import { EstadisticaEstatalComponent } from './components/estadistica-estatal/estadistica-estatal.component';
 import { PrePiePaginaComponent } from './components/pre-pie-pagina/pre-pie-pagina.component';
 import { PiePaginaComponent } from './components/pie-pagina/pie-pagina.component';
+import { VotosPartidosEntidadComponent } from './components/votos-partidos-entidad/votos-partidos-entidad.component';
+import { ResumenVotacionComponent } from './components/resumen-votacion/resumen-votacion.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +40,16 @@ import { PiePaginaComponent } from './components/pie-pagina/pie-pagina.component
     ResumenDistritoMapaComponent,
     EstadisticaEstatalComponent,
     PrePiePaginaComponent,
-    PiePaginaComponent
+    PiePaginaComponent,
+    VotosPartidosEntidadComponent,
+    ResumenVotacionComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    APP_ROUTING
   ],
-  providers: [],
+  providers: [JsonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

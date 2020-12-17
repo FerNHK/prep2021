@@ -1,0 +1,204 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card p-3">
+                <div class="row">
+                    <div class="col-10">
+                        <h3 class="titulo-seccion">
+                            Ayuntamientos -
+                            <span class="txRosaIne"><strong>Quintana Roo - </strong>  Votos por Partido Político y Candidatura Independiente </span
+              >
+            </h3>
+            <div class="texto font-medium">
+              <p>
+                El total de votos calculado y porcentaje que se muestran, se
+                refieren a los votos asentados en las Actas PREP hasta el
+                momento.
+              </p>
+              <p>
+                Por presentación, los decimales de los porcentajes muestran sólo
+                cuatro dígitos. No obstante, al considerar todos los decimales,
+                suman 100%.
+              </p>
+              <p class="my-3">
+                En la tabla se muestra el número de Municipios que cada
+                <strong
+                  >Partido Político, Coalición o Candidatura
+                  Independiente</strong
+                >
+                ha obtenido hasta el momento.
+              </p>
+            </div>
+          </div>
+          <div class="col-2">
+            <p class="px12 text-left">
+              <strong>Visualiza como:</strong>
+            </p>
+            <div class="visualizar dis-flex flex-col text-center">
+              <div class="selector dis-flex w-100 cursorPointer">
+                <div class="activo izq dis-flex flex-col w-50 p-2">
+                  <img
+                    src="assets/img/iconos-visualiza/Mapa-B.svg"
+                    class="img-visualiza img-fluid"
+                  />
+                  <p>Mapa</p>
+                </div>
+                <div
+                  class="dis-flex der flex-col w-50 p-2"
+                  tabindex="0"
+                  ng-reflect-router-link="../tarjetas"
+                >
+                  <img
+                    src="assets/img/iconos-visualiza/Tarjetas-B.svg"
+                    class="img-visualiza img-fluid"
+                    style="opacity: 0.5"
+                  />
+                  <p>Tarjetas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row py-4">
+          <div class="col-12">
+            <h4 class="subtitulo-seccion pleca-izquierda">
+              <strong>Votos en Actas Contabilizadas</strong>
+            </h4>
+            <div>
+              <div class="wrapperScroll2Grafica">
+                <div class="tableDoubleScroll" style="width: 1480px;">
+                  <table class="table table-borderedHeader">
+                    <thead class="table-borderedHeader ">
+                      <tr>
+                        <td id="static" class="" style="z-index:999; background:#fff;">
+                        </td>
+                        <!-- -->
+                        <td *ngFor="let fondo of datosJson" class="fondoGrafica td-relative">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td id="static" style="z-index:999; background:#fff;"class="td-relative table-borderedHeader sinBorde">
+                          <div class="my-chart-label ">
+                            Votos
+                          </div>
+                          <div class="linea-chart-nl line-chart-100 line-char-first ">
+                            140,000
+                          </div>
+                          <div class="linea-chart-nl line-chart-80 line-char-first ">
+                           120,000
+                          </div>
+                          <div class="linea-chart-nl line-chart-60 line-char-first ">
+                            100,000
+                          </div>
+                          <div class="linea-chart-nl line-chart-40 line-char-first ">
+                            80,000
+                          </div>
+                          <div class="linea-chart-nl line-chart-20 line-char-first ">
+                            60,000
+                          </div>
+                          <div class="linea-chart-nl line-chart-0 line-char-first ">
+                            0
+                          </div>
+                          <div class="my-chart ">
+                            <div class="my-char-item " style="height: 0px ">
+                            </div>
+                          </div>
+                        </td>
+                        <!-- -->
+                        <!--Pan-->
+                        <td class="fondoGrafica td-relative" *ngFor="let partidos of datosJson">
+                          <div class="linea-chart line-chart-100 ">
+                          </div>
+                          <div class="linea-chart line-chart-80 ">
+                          </div>
+                          <div class="linea-chart line-chart-60 ">
+                          </div>
+                          <div class="linea-chart line-chart-40 ">
+                          </div>
+                          <div class="linea-chart line-chart-20 ">
+                          </div>
+                          <div class="linea-chart-nl line-chart-0 ">
+                          </div>
+                          <div class="progress-bar-vertical ">
+                            <div id="{{partidos.partido}}" aria-valuemax="100" aria-valuemin="0" class="progress-bar " data-placement="left" data-toggle="tooltip" role="progressbar" style="height: {{partidos.porcentaje}}%; background-color: #06338E;" title="Votos 7,897,600 ">
+                            </div>
+                          </div>
+                        </td>
+                        <!--Pri-->
+
+                        <td class="fondoGrafica td-relative">
+                          <div class="linea-chart-ln line-chart-100 "></div>
+                          <div class="linea-chart-ln line-chart-80 "></div>
+                          <div class="linea-chart-ln line-chart-60 "></div>
+                          <div class="linea-chart-ln line-chart-40 "></div>
+                          <div class="linea-chart-ln line-chart-20 "></div>
+                          <div class="linea-chart-nl line-chart-0 "></div>
+                        </td>
+                      </tr>
+                    </thead>
+                    <tbody id="tb_votos_pp_ci" class="table-bordered ">
+                      <tr>
+                        <td id="static" style="background:#fff;">
+                          <p class="p_separador"></p>
+                        </td>
+                        <!-- -->
+                        <td class="align-self-center verticalCenter texto16pxRegular" *ngFor="let imagenes of datosJson">
+                          <!-- -->
+                          <div *ngIf=" imagenes.partido != 'nulos' && imagenes.partido != 'no_registrados' &&  imagenes.partido != 'total'">
+                            <img class="emblemaTablaMapa" src="./../assets/img/logos-partidos/{{imagenes.partido}}.svg">
+                            <br>
+                          </div>
+                          <div *ngIf=" imagenes.partido == 'no_registrados'">
+                            <div>
+                              Candidaturas <br> no <br> registradas
+                            </div>
+                          </div>
+                          <div *ngIf=" imagenes.partido == 'nulos'">
+                            <div>
+                              Votos nulos
+                            </div>
+                            <!-- -->
+                          </div>
+                          <div *ngIf=" imagenes.partido == 'total'">
+                            <div>
+                              Total
+                            </div>
+                            <!-- -->
+                          </div>
+                          <!-- -->
+                        </td>
+
+                        
+                      </tr>
+                      <tr class="encabezadoDatos">
+                        <td id="static"class="encabezadoRenglon texto16pxMedium text-left">
+                          Total de votos
+                        </td>
+                        <!-- -->
+                        <td class="votosObtenidos text-center texto16pxRegular" *ngFor="let votos of datosJson">
+                          {{votos.votos}}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td id="static" class="encabezadoRenglon texto16pxMedium text-left" >
+                          Porcentaje
+                        </td>
+                        <!-- -->
+                        <td class="votosObtenidos text-center texto16pxRegular" *ngFor="let porcentaje of datosJson">
+                          {{porcentaje.porcentaje}}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+        <app-resumen-votacion></app-resumen-votacion>
+    </div>
+</div>
+</div>
+</div>
+<app-estadistica-estatal></app-estadistica-estatal>
